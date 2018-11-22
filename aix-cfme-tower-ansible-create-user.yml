@@ -3,14 +3,13 @@
   gather_facts: True
   
   tasks:
-  - name: add group adejoux
+  - name: add group "{{ user }}" 
     group: 
       name: "{{ user }}" 
       state: present
       
-  - name: create user adejoux
+  - name: create user "{{ user }}" 
     user: 
       name: "{{ user }}" 
-      comment: "{{ username }}" 
-      uid: 1000 
+      comment: "{{ user_name }}" 
       group: "{{ user }}"
