@@ -7,11 +7,11 @@
     group: 
       name: "{{ user }}" 
       state: present
-      password: "{{ password }}"
-      update_password: on_create
       
   - name: create user "{{ user }}" 
     user: 
       name: "{{ user }}" 
       comment: "{{ user_name }}" 
       group: "{{ user }}"
+      password: "{{ password }}"
+      update_password: on_create
