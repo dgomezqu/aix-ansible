@@ -1,6 +1,6 @@
 - name: Create User and Group on AIX
   hosts: all
-  gather_facts: True
+  gather_facts: False
   
   tasks:
   - name: Encrypt password
